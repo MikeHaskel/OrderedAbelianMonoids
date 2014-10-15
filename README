@@ -1,0 +1,58 @@
+This program finds the ordered abelian unital monoids of a given size.
+Note that the unit element is not considered to contribute to the
+size.  When invoked with a size as a single argument, the program will
+print the ordered abelian unital monoids of that size to the terminal
+(standard output).
+
+
+Output format:
+
+Each monoid occupies one line of output.  As an example, consider the
+following output line:
+
+  [[2,1,1,0],[1,1,0],[1,0],[0],[]].
+
+This line is to be read as the following upper triangular matrix:
+
+  2 1 1 0
+    1 1 0
+      1 0
+        0.
+
+This matrix is, in turn, to be considered as the upper part of the
+(symmetric) multiplication table for the non-unit elements of the
+monoid.  The numbers themselves refer to these non-unit elements, in
+reverse order.  That is, in this size four example, if our monoid
+consists of elements
+
+  0 < a < b < c < d,
+
+then "a" corresponds to "3" in the printed output, "b" corresponds to
+"2", "c" corresponds to "1", and "d" corresponds to "0".  Beware that
+"0" in the printed output does not correspond to the unit of the
+monoid.  Putting this all together, the example line corresponds to
+the following multiplication table:
+
+  __|_0_|_a_|_b_|_c_|_d_
+  0 | 0   a   b   c   d
+  a | a   b   c   c   d
+  b | b   c   c   c   d
+  c | c   c   c   c   d
+  d | d   d   d   d   d
+
+
+Copyright and license:
+
+Copyright 2014 Mike Haskel <mhaskel@nd.edu>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
